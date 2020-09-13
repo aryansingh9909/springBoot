@@ -71,7 +71,7 @@ public class ProductController {
         if(bindingResult.hasErrors()){
             return "product/productform";
         }
-
+        System.out.println("details:"+productForm);
         Product savedProduct = productService.saveOrUpdateProductForm(productForm);
 
         return "redirect:/product/show/" + savedProduct.getId();
